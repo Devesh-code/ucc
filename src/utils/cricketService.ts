@@ -43,17 +43,17 @@ export interface TeamStanding {
 const mockPlayers: Player[] = [
   {
     id: "1",
-    name: "John Smith",
+    name: "Kunal Kirtikar",
     role: "All-rounder",
     imageUrl: "/placeholder.svg",
     battingStyle: "Right-handed",
-    bowlingStyle: "Right-arm medium",
+    bowlingStyle: "Right-arm spinner",
     matches: 15,
     runsScored: 420,
     battingAverage: 35.0,
     wickets: 18,
     bowlingAverage: 22.5,
-    bio: "John is a versatile all-rounder who can contribute with both bat and ball. He joined UCC in 2019 and has been a consistent performer."
+    bio: "Kunal is a versatile all-rounder who can contribute with both bat and ball. He joined UCC in 2008 and has been a consistent performer."
   },
   {
     id: "2",
