@@ -126,7 +126,7 @@ const mockPlayers: Player[] = [
 const mockMatches: Match[] = [
   {
     id: "1",
-    date: "2025-05-01",
+    date: "2025-05-31",
     opponent: "TBD",
     venue: "Quincy",
     time: "8:00 AM",
@@ -134,7 +134,7 @@ const mockMatches: Match[] = [
   },
   {
     id: "2",
-    date: "2025-05-08",
+    date: "2025-06-07",
     opponent: "TBD",
     venue: "Quincy",
     time: "8:00 AM",
@@ -142,21 +142,21 @@ const mockMatches: Match[] = [
   },
   {
     id: "3",
-    date: "2025-05-15",
+    date: "2025-06-15",
     opponent: "TBD",
     venue: "Quincy",
     time: "8:00 AM",
   },
   {
     id: "4",
-    date: "2025-05-22",
+    date: "2025-06-22",
     opponent: "TBD",
     venue: "Quincy",
     time: "8:00 AM",
   },
   {
     id: "5",
-    date: "2025-05-29",
+    date: "2025-06-29",
     opponent: "TBD",
     venue: "Quincy",
     time: "8:00 AM",
