@@ -57,20 +57,20 @@ const mockPlayers: Player[] = [
   },
   {
     id: "2",
-    name: "Michael Johnson",
+    name: "Brian Viegas",
     role: "Batsman",
     imageUrl: "/placeholder.svg",
-    battingStyle: "Left-handed",
+    battingStyle: "Right-handed",
     matches: 20,
     runsScored: 780,
     battingAverage: 42.5,
     wickets: 0,
     bowlingAverage: 0,
-    bio: "Michael is our leading run-scorer and a reliable top-order batsman. His technique against both pace and spin makes him a valuable player."
+    bio: "Brian is our captain and a reliable top-order batsman. His batting technique makes him a valuable player."
   },
   {
     id: "3",
-    name: "David Wilson",
+    name: "Santosh Pandey",
     role: "Bowler",
     imageUrl: "/placeholder.svg",
     bowlingStyle: "Right-arm fast",
@@ -79,26 +79,26 @@ const mockPlayers: Player[] = [
     battingAverage: 12.0,
     wickets: 35,
     bowlingAverage: 18.2,
-    bio: "David is our strike bowler who consistently takes wickets with his pace and accuracy. He's known for his lethal yorkers in death overs."
+    bio: "Santosh is our strike bowler who consistently takes wickets with his pace and accuracy. He's known for his lethal yorkers in death overs."
   },
   {
     id: "4",
-    name: "Rahul Patel",
+    name: "Juffin Francis",
     role: "All-rounder",
     imageUrl: "/placeholder.svg",
     battingStyle: "Right-handed",
-    bowlingStyle: "Right-arm off-spin",
+    bowlingStyle: "Left-arm fast-bowling",
     matches: 22,
     runsScored: 540,
     battingAverage: 30.0,
     wickets: 28,
     bowlingAverage: 24.1,
-    bio: "Rahul contributes in all departments of the game. His off-spin bowling and middle-order batting have won many matches for UCC."
+    bio: "Juffin contributes in all departments of the game. His off-spin bowling and middle-order batting have won many matches for UCC."
   },
   {
     id: "5",
-    name: "James Anderson",
-    role: "Wicket-keeper",
+    name: "Pritish Devrukar",
+    role: "Batsmena",
     imageUrl: "/placeholder.svg",
     battingStyle: "Right-handed",
     matches: 19,
@@ -106,79 +106,71 @@ const mockPlayers: Player[] = [
     battingAverage: 25.0,
     wickets: 0,
     bowlingAverage: 0,
-    bio: "James is our primary wicket-keeper with quick reflexes behind the stumps. He's also a capable middle-order batsman who can accelerate when needed."
+    bio: "Pritish is our primary traditional batsmen and likes to play long innings"
   },
   {
     id: "6",
-    name: "Ahmed Hassan",
-    role: "Bowler",
+    name: "Kailash Natarajan",
+    role: "Batsmen",
     imageUrl: "/placeholder.svg",
-    bowlingStyle: "Left-arm orthodox spin",
+    bowlingStyle: "Righy-arm Batsmen",
     matches: 16,
     runsScored: 85,
     battingAverage: 8.5,
     wickets: 30,
     bowlingAverage: 19.8,
-    bio: "Ahmed is our specialist spin bowler who can take wickets consistently in the middle overs. His control and variations make him difficult to score against."
+    bio: "Ahmed is our specialist Batsmen who likes to score big runs with high stike rate."
   }
 ];
 
 const mockMatches: Match[] = [
   {
     id: "1",
-    date: "2025-04-18",
-    opponent: "Boston CC",
-    venue: "UCC Home Ground",
-    time: "10:00 AM",
+    date: "2025-05-01",
+    opponent: "TBD",
+    venue: "Quincy",
+    time: "8:00 AM",
     isCompleted: false
   },
   {
     id: "2",
-    date: "2025-04-25",
-    opponent: "Cambridge XI",
-    venue: "Cambridge Oval",
-    time: "2:00 PM",
+    date: "2025-05-01",
+    opponent: "TBD",
+    venue: "Quincy",
+    time: "8:00 AM",
     isCompleted: false
   },
   {
     id: "3",
-    date: "2025-03-30",
-    opponent: "Waltham Warriors",
-    venue: "UCC Home Ground",
-    time: "10:00 AM",
-    result: "Won",
-    isCompleted: true,
-    uccScore: "180/5",
-    opponentScore: "160/8"
+    date: "2025-05-01",
+    opponent: "TBD",
+    venue: "Quincy",
+    time: "8:00 AM",
   },
   {
     id: "4",
-    date: "2025-03-23",
-    opponent: "Lowell Lions",
-    venue: "Lowell Cricket Ground",
-    time: "1:00 PM",
-    result: "Lost",
-    isCompleted: true,
-    uccScore: "145/9",
-    opponentScore: "146/3"
+    date: "2025-05-01",
+    opponent: "TBD",
+    venue: "Quincy",
+    time: "8:00 AM",
   },
   {
     id: "5",
-    date: "2025-03-16",
-    opponent: "Acton Aces",
-    venue: "UCC Home Ground",
-    time: "11:00 AM",
+    date: "2025-05-01",
+    opponent: "TBD",
+    venue: "Quincy",
+    time: "8:00 AM",
     result: "Won",
     isCompleted: true,
-    uccScore: "220/6",
-    opponentScore: "180/10"
+    uccScore: "",
+    opponentScore: ""
   }
 ];
 
 const mockStandings: TeamStanding[] = [
   {
     position: 1,
-    teamName: "Cambridge XI",
+    teamName: "UCC",
     matches: 5,
     won: 4,
     lost: 1,
@@ -188,7 +180,7 @@ const mockStandings: TeamStanding[] = [
   },
   {
     position: 2,
-    teamName: "UCC",
+    teamName: "TBD",
     matches: 5,
     won: 3,
     lost: 2,
@@ -198,7 +190,7 @@ const mockStandings: TeamStanding[] = [
   },
   {
     position: 3,
-    teamName: "Boston CC",
+    teamName: "TBD",
     matches: 5,
     won: 3,
     lost: 2,
@@ -208,7 +200,7 @@ const mockStandings: TeamStanding[] = [
   },
   {
     position: 4,
-    teamName: "Waltham Warriors",
+    teamName: "TBD",
     matches: 5,
     won: 2,
     lost: 3,
@@ -218,7 +210,7 @@ const mockStandings: TeamStanding[] = [
   },
   {
     position: 5,
-    teamName: "Lowell Lions",
+    teamName: "TBD",
     matches: 5,
     won: 2,
     lost: 3,
@@ -228,7 +220,7 @@ const mockStandings: TeamStanding[] = [
   },
   {
     position: 6,
-    teamName: "Acton Aces",
+    teamName: "TBD",
     matches: 5,
     won: 1,
     lost: 4,
