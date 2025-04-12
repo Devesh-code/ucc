@@ -33,12 +33,12 @@ const WebCrawler = () => {
         description: "Starting to crawl the NECA website for UCC data...",
       });
 
-      // Using the correct property name 'includeTerms' instead of 'searchTerms'
+      // Using the appropriate properties for the Firecrawl API
       const response = await firecrawl.crawlUrl('https://neca2020.org/', {
         limit: 10,
         scrapeOptions: {
           formats: ['markdown', 'html'],
-          includeTerms: ['UCC', 'United Cricket Club']
+          keywords: ['UCC', 'United Cricket Club'] // Using keywords property which is supported
         }
       });
 
