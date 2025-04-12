@@ -16,7 +16,7 @@ const CustomFooter = ({ children }: FooterProps) => {
             <span className="font-bold text-lg">United Cricket Club</span>
           </div>
           <div className="text-sm text-muted-foreground">
-            {children || "© 2025 United Cricket Club. All rights reserved."}
+            {children || "© 2008 United Cricket Club. All rights reserved."}
           </div>
         </div>
       </div>
