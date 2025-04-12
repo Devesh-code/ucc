@@ -71,7 +71,7 @@ const mockPlayers: Player[] = [
   {
     id: "3",
     name: "Santosh Pandey",
-    role: "Bowler",
+    role: "Allrounder",
     imageUrl: "/placeholder.svg",
     bowlingStyle: "Right-arm fast",
     matches: 18,
