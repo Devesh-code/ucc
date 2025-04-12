@@ -22,7 +22,7 @@ const Index = () => {
           <div className="container mx-auto px-6 py-16 text-white">
             <h1 className="text-3xl md:text-5xl font-bold mb-4">Welcome to UCC Cricket</h1>
             <p className="text-lg md:text-xl mb-8 max-w-2xl">
-              Home of the University Cricket Club in the New England Cricket Association
+              Home of the United Cricket Club in the New England Cricket Association
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild variant="secondary" className="bg-cricket-gold hover:bg-yellow-500 text-black">
