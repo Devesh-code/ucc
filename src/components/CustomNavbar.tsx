@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Trophy } from "lucide-react"; // Using Trophy instead of Cricket
+import { Trophy } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Button } from "@/components/ui/button";
 

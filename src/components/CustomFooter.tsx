@@ -1,6 +1,6 @@
 
 import { ReactNode } from "react";
-import { Trophy } from "lucide-react"; // Using Trophy instead of Cricket
+import { Trophy } from "lucide-react"; 
 
 type FooterProps = {
   children?: ReactNode;
@@ -13,10 +13,10 @@ const CustomFooter = ({ children }: FooterProps) => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
             <Trophy className="h-6 w-6 text-cricket-pitch mr-2" />
-            <span className="font-bold text-lg">University Cricket Club</span>
+            <span className="font-bold text-lg">United Cricket Club</span>
           </div>
           <div className="text-sm text-muted-foreground">
-            {children || "© 2025 University Cricket Club. All rights reserved."}
+            {children || "© 2025 United Cricket Club. All rights reserved."}
           </div>
         </div>
       </div>

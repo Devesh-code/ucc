@@ -1,6 +1,6 @@
 
 import { NavLink } from "react-router-dom";
-import { Menu, X, Cricket } from "lucide-react";
+import { Menu, X, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center space-x-2">
-            <Cricket size={28} className="text-white" />
+            <Trophy size={28} className="text-white" />
             <span className="text-xl font-bold text-white">UCC Cricket</span>
           </NavLink>
 
