@@ -33,11 +33,12 @@ const WebCrawler = () => {
         description: "Starting to crawl the NECA website for UCC data...",
       });
 
+      // Removed the invalid includeKeywords parameter
       const response = await firecrawl.crawlUrl('https://neca2020.org/', {
         limit: 10,
-        includeKeywords: ['UCC', 'University Cricket Club'],
         scrapeOptions: {
           formats: ['markdown', 'html'],
+          searchTerms: ['UCC', 'University Cricket Club'] // Using searchTerms instead
         }
       });
 

@@ -6,7 +6,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
-import { ChevronLeft, Cricket, TrendingUp, Trophy, Target } from "lucide-react";
+import { ChevronLeft, Trophy, TrendingUp, Target, Award } from "lucide-react";  // Replaced Cricket with Award
 
 const PlayerDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -74,7 +74,7 @@ const PlayerDetail = () => {
           <Card className="mb-6 overflow-hidden">
             <div className="relative aspect-square overflow-hidden bg-muted flex justify-center items-center">
               <div className="absolute inset-0 cricket-gradient opacity-20"></div>
-              <Cricket size={80} className="text-cricket-pitch opacity-20" />
+              <Trophy size={80} className="text-cricket-pitch opacity-20" /> {/* Replaced Cricket with Trophy */}
               <img
                 src={player.imageUrl}
                 alt={player.name}
@@ -187,7 +187,7 @@ const PlayerDetail = () => {
                 {player.wickets > 0 && (
                   <div>
                     <h3 className="text-lg font-semibold mb-4 flex items-center">
-                      <Cricket size={18} className="mr-2 text-cricket-pitch" />
+                      <Award size={18} className="mr-2 text-cricket-pitch" /> {/* Replaced Cricket with Award */}
                       Bowling Records
                     </h3>
                     <div className="space-y-2 text-sm">

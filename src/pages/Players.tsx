@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Cricket } from "lucide-react";
+import { Trophy } from "lucide-react";  // Replaced Cricket with Trophy
 
 const Players = () => {
   const { data: players, isLoading, error } = usePlayers();
@@ -44,7 +44,7 @@ const Players = () => {
               <Card key={player.id} className="overflow-hidden hover:shadow-md transition-shadow">
                 <div className="relative h-60 overflow-hidden bg-muted flex justify-center items-center">
                   <div className="absolute inset-0 cricket-gradient opacity-20"></div>
-                  <Cricket size={64} className="text-cricket-pitch opacity-20" />
+                  <Trophy size={64} className="text-cricket-pitch opacity-20" /> {/* Replaced Cricket with Trophy */}
                   <img
                     src={player.imageUrl}
                     alt={player.name}
