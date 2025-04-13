@@ -5,12 +5,40 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useToast } from "@/components/ui/use-toast";
-import FirecrawlApp from '@mendable/firecrawl-js';
 import { Loader2 } from 'lucide-react';
+
+// Create a browser-safe API for crawling
+const crawlWebsite = async (url: string, apiKey: string) => {
+  const response = await fetch('https://api.firecrawl.dev/v1/crawl', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`
+    },
+    body: JSON.stringify({
+      url,
+      limit: 10,
+      scrapeOptions: {
+        formats: ['markdown', 'html'],
+        filter: {
+          includeTerms: ['UCC', 'United Cricket Club']
+        }
+      }
+    })
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.message || 'Failed to crawl website');
+  }
+
+  return response.json();
+};
 
 const WebCrawler = () => {
   const { toast } = useToast();
   const [apiKey, setApiKey] = useState('');
+  const [url, setUrl] = useState('https://neca2020.org/');
   const [isLoading, setIsLoading] = useState(false);
   const [crawlResults, setCrawlResults] = useState<any | null>(null);
 
@@ -26,27 +54,18 @@ const WebCrawler = () => {
 
     setIsLoading(true);
     try {
-      const firecrawl = new FirecrawlApp({ apiKey });
-      
       toast({
         title: "Crawling Started",
-        description: "Starting to crawl the NECA website for UCC data...",
+        description: "Starting to crawl the website for UCC data...",
       });
 
-      // Using the appropriate properties for the Firecrawl API
-      const response = await firecrawl.crawlUrl('https://neca2020.org/', {
-        limit: 10,
-        scrapeOptions: {
-          formats: ['markdown', 'html'],
-          keywords: ['UCC', 'United Cricket Club'] // Using keywords property which is supported
-        }
-      });
+      const response = await crawlWebsite(url, apiKey);
 
       if (response.success) {
         setCrawlResults(response);
         toast({
           title: "Success",
-          description: "Successfully crawled the NECA website!",
+          description: "Successfully crawled the website!",
         });
       } else {
         toast({
@@ -59,7 +78,7 @@ const WebCrawler = () => {
       console.error("Crawl error:", error);
       toast({
         title: "Error",
-        description: "An error occurred while crawling the website",
+        description: error instanceof Error ? error.message : "An error occurred while crawling the website",
         variant: "destructive",
       });
     } finally {
@@ -90,8 +109,22 @@ const WebCrawler = () => {
                 className="w-full"
               />
               <p className="text-xs text-muted-foreground mt-1">
-                You need a Firecrawl API key to fetch data from the NECA website
+                You need a Firecrawl API key to fetch data from websites
               </p>
+            </div>
+            
+            <div>
+              <label htmlFor="url" className="block text-sm font-medium mb-1">
+                Website URL
+              </label>
+              <Input
+                id="url"
+                type="text"
+                value={url}
+                onChange={(e) => setUrl(e.target.value)}
+                placeholder="Enter website URL"
+                className="w-full"
+              />
             </div>
             
             <Button 
@@ -105,7 +138,7 @@ const WebCrawler = () => {
                   Crawling...
                 </>
               ) : (
-                "Crawl NECA Website for UCC Data"
+                "Crawl Website for UCC Data"
               )}
             </Button>
           </div>
