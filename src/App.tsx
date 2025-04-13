@@ -13,6 +13,7 @@ import Schedule from "./pages/Schedule";
 import Standings from "./pages/Standings";
 import Layout from "./components/Layout";
 import WebCrawler from "./components/WebCrawler";
+import ScrapedMatchesViewer from "./components/ScrapedMatchesViewer";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="schedule" element={<Schedule />} />
             <Route path="standings" element={<Standings />} />
             <Route path="crawler" element={<WebCrawler />} />
+            <Route path="scraped-matches" element={<ScrapedMatchesViewer />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
