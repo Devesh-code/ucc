@@ -1,4 +1,3 @@
-
 import { useQuery } from "@tanstack/react-query";
 
 export interface Player {
@@ -120,6 +119,19 @@ const mockPlayers: Player[] = [
     wickets: 30,
     bowlingAverage: 19.8,
     bio: "Ahmed is our specialist Batsmen who likes to score big runs with high stike rate."
+  },
+  {
+    id: "7",
+    name: "Amit Kulkarni",
+    role: "Batsman",
+    imageUrl: "/placeholder.svg",
+    battingStyle: "Right-handed",
+    matches: 25,
+    runsScored: 682,
+    battingAverage: 28.4,
+    wickets: 4,
+    bowlingAverage: 38.5,
+    bio: "Amit is a dependable batsman who joined UCC in 2019. Known for his defensive technique and ability to anchor the innings, he has become a crucial part of the team's batting lineup. Outside of cricket, he works as a software engineer."
   }
 ];
 
