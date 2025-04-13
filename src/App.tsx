@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Players from "./pages/Players";
 import PlayerDetail from "./pages/PlayerDetail";
+import PlayerStats from "./pages/PlayerStats";
 import Schedule from "./pages/Schedule";
 import Standings from "./pages/Standings";
 import Layout from "./components/Layout";
@@ -26,6 +27,7 @@ const App = () => (
             <Route index element={<Index />} />
             <Route path="players" element={<Players />} />
             <Route path="players/:id" element={<PlayerDetail />} />
+            <Route path="playerstats" element={<PlayerStats />} />
             <Route path="schedule" element={<Schedule />} />
             <Route path="standings" element={<Standings />} />
             <Route path="crawler" element={<WebCrawler />} />

@@ -146,6 +146,7 @@ const mockMatches: Match[] = [
     opponent: "TBD",
     venue: "Quincy",
     time: "8:00 AM",
+    isCompleted: false
   },
   {
     id: "4",
@@ -153,6 +154,7 @@ const mockMatches: Match[] = [
     opponent: "TBD",
     venue: "Quincy",
     time: "8:00 AM",
+    isCompleted: false
   },
   {
     id: "5",
